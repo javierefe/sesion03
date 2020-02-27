@@ -1,5 +1,7 @@
 package com.mitocode.ejercicio6.referencias.metodos;
 
+import java.util.Arrays;
+
 public class Programa1 {
 	
 	
@@ -18,6 +20,8 @@ public class Programa1 {
 		};
 		op1.imprimir();
 		
+		
+		//LAMBDA SE LE ENVIA SOLO METODOS ESTATICO Y SIN PARAMETROS
 		//Refenciar a un metodo estatico
 		IOperacion op2 = () -> Programa1.referenciaMetodoStatic();
 		op2.imprimir();
@@ -26,6 +30,24 @@ public class Programa1 {
 		//simplificado de lo de arriba, requisito es que el metodo estatico no tenga parametros
 		IOperacion op3 = Programa1::referenciaMetodoStatic;
 		op3.imprimir();
+		
+		
+		System.out.println(" ");
+		String[] colores = {"negro","amarillo","verde","azul","vileta"};
+		System.out.println("Colores : ");
+		for (String color : colores) {
+			System.out.print(color + " ");
+		}
+		System.out.println(" ");
+		Arrays.sort(colores, String::compareTo); //compareToIgnoreCase ignora las mayusculas
+		System.out.println("\nColores ordenados: ");
+		for (String color : colores) {
+			System.out.print(color + " ");
+		}
+				
+				
+				
+				
 		
 
 	}

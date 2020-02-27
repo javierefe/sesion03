@@ -115,8 +115,25 @@ public class Programa2 {
 		}
 		
 		
+		//para evitar condicionales 
+		//cuando es stream se usa compareTo
+		System.out.println(" ");
+		lista.sort((Empleado o1, Empleado o2) -> Integer.compare(o1.getEdad(), o2.getEdad()));
+		for (Empleado empleado : lista) {
+			System.out.println(empleado);
+		}
 		
 		
+		System.out.println(" ");
+		lista.sort((Empleado o1, Empleado o2) -> Double.compare(o1.getSueldo(), o2.getSueldo()));
+		for (Empleado empleado : lista) {
+			System.out.println(empleado);
+		}
+		
+		String a = "Ag";
+		String b = "ao";
+		
+		System.out.println(a.compareTo(b));
 	
 		
 		
