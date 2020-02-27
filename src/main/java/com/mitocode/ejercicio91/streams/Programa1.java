@@ -60,6 +60,8 @@ public class Programa1 {
 		List<Empleado> listaNueva = lista.stream().filter(e -> e.getSueldo()>1500).collect(Collectors.toList());
 		listaNueva.forEach(System.out::println);
 		
+		
+		
 //		String nombre = "Dany";
 //		boolean estado = nombre.startsWith("D");
 //		System.out.println(estado);
